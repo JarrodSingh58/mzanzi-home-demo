@@ -32,6 +32,12 @@ Everything is stored in your browser on your own device. Nothing is sent to a se
 
 One `index.html` file with vanilla JavaScript and no build step, styled with Pico CSS from a CDN plus a small style block. Data is kept in localStorage.
 
+## Keeping token use low
+
+- The whole app lives in a single HTML file, so there is only one file to generate, read and edit.
+- It was built from one prompt that held all the key information and details up front, so there was little back and forth.
+- The prompt was specific about layout, behaviour and data, which avoided rework and extra tokens.
+
 ## Limitations
 
 - It is a demo, so the login is not secure
