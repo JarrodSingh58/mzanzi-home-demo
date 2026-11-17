@@ -293,7 +293,7 @@ add("savings",mo,20,"Emergency jar",150);
 return{income:8500,deps:3,alloc:{rent:25,food:30,electricity:8,transport:12,school:8,savings:5},entries:e,
 own:[{id:uid(),name:"Fridge",v:3500},{id:uid(),name:"Cellphone",v:1800},{id:uid(),name:"Stove",v:1200},{id:uid(),name:"Bicycle",v:900}],
 owe:[{id:uid(),name:"Furniture account",v:2400},{id:uid(),name:"Neighbour loan",v:500},{id:uid(),name:"Clothing account",v:850}],
-tab:"income",side:false,sumOpen:false,period:"this",from:"",to:"",drafts:{}}
+tab:"income",side:false,sumOpen:true,period:"this",from:"",to:"",drafts:{}}
 }
 function load(){
 var raw=null;try{raw=JSON.parse(localStorage.getItem(KEY))}catch(x){raw=null}
@@ -311,6 +311,7 @@ if(S.income==null)S.income=8500;
 if(S.deps==null)S.deps=0;
 if(!S.tab)S.tab="income";
 if(!S.period)S.period="this";
+if(typeof S.sumOpen!=="boolean")S.sumOpen=true;
 }else{S=d;save()}
 }
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(x){}}
